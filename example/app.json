@@ -1,0 +1,22 @@
+{
+  "name": "react-native-animated-header-view-example",
+  "displayName": "AnimatedHeaderView Example",
+  "expo": {
+    "name": "react-native-animated-header-view-example",
+    "slug": "react-native-animated-header-view-example",
+    "description": "Example app for react-native-animated-header-view",
+    "privacy": "public",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
