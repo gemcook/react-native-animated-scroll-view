@@ -1,5 +1,13 @@
 {
-  "extends": [
-    "config:base"
-  ]
+  "extends": ["config:base"],
+  "packageRules": [
+    {
+      "groupName": "all non-major dependencies",
+      "updateTypes": ["patch", "minor"],
+      "groupSlug": "all-minor-patch",
+      "excludePackageNames": ["react-native"]
+    }
+  ],
+  "labels": ["dependencies"],
+  "schedule": "every weekend"
 }
