@@ -25,8 +25,13 @@ module.exports = {
   rules: {
     'react/prop-types': 'off',
     'import/prefer-default-export': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'import/no-unresolved': 'off',
     'react-native/no-inline-styles': 'error',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/naming-convention': 'off',
+    '@typescript-eslint/no-use-before-define': 'off',
     'global-require': 'off',
     'import/order': [
       'error',

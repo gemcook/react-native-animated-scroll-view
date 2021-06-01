@@ -1,5 +1,4 @@
 import * as React from 'react';
-
 import { StyleSheet, View, Text } from 'react-native';
 import AnimatedHeaderView from 'react-native-animated-header-view';
 
@@ -12,7 +11,10 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>
+        Result:
+        {result}
+      </Text>
     </View>
   );
 }
