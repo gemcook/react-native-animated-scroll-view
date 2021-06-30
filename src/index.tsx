@@ -1,5 +1,5 @@
-export default {
-  multiply(a: number, b: number) {
-    return Promise.resolve(a * b);
-  },
-};
+import AnimationHeaderFlatList from './AnimationHeaderView/FlatList';
+import AnimationHeaderSectionList from './AnimationHeaderView/SectionList';
+
+export const FlatList = AnimationHeaderFlatList;
+export const SectionList = AnimationHeaderSectionList;
