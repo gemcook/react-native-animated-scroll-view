@@ -1,18 +1,28 @@
 import * as React from 'react';
-
 import { StyleSheet, View, Text } from 'react-native';
-import AnimatedScrollView from 'react-native-animated-scroll-view';
+import { ScrollView } from 'react-native-animated-scroll-view';
+
+const DATA = Array.from({ length: 30 }).map((_, index) => ({ id: index }));
+const maxHeight = 150;
+const minHeight = 50;
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    AnimatedScrollView.multiply(3, 7).then(setResult);
-  }, []);
-
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <ScrollView
+        style={styles.container}
+        maxHeight={maxHeight}
+        minHeight={minHeight}
+        AnimationHeaderComponent={<View style={styles.animationHeader} />}
+      >
+        {DATA.map((item) => {
+          return (
+            <View style={styles.listItem} key={item.id}>
+              <Text>{item.id}</Text>
+            </View>
+          );
+        })}
+      </ScrollView>
     </View>
   );
 }
@@ -20,12 +30,19 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   box: {
     width: 60,
     height: 60,
     marginVertical: 20,
+  },
+  listItem: {
+    width: '100%',
+    height: 60,
+  },
+  animationHeader: {
+    backgroundColor: 'red',
+    height: '100%',
+    width: '100%',
   },
 });
