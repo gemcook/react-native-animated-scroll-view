@@ -1,0 +1,22 @@
+{
+  "name": "react-native-animated-scroll-view-example",
+  "displayName": "AnimatedScrollView Example",
+  "expo": {
+    "name": "react-native-animated-scroll-view-example",
+    "slug": "react-native-animated-scroll-view-example",
+    "description": "Example app for react-native-animated-scroll-view",
+    "privacy": "public",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
