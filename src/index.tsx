@@ -1,7 +1,7 @@
-import AnimationHeaderScrollView from './AnimationHeaderView/ScrollView';
-import AnimationHeaderFlatList from './AnimationHeaderView/FlatList';
-import AnimationHeaderSectionList from './AnimationHeaderView/SectionList';
+import AnimatedScrollView from './AnimatedScrollView/ScrollView';
+import AnimatedFlatList from './AnimatedScrollView/FlatList';
+import AnimatedSectionList from './AnimatedScrollView/SectionList';
 
-export const ScrollView = AnimationHeaderScrollView;
-export const FlatList = AnimationHeaderFlatList;
-export const SectionList = AnimationHeaderSectionList;
+export const ScrollView = AnimatedScrollView;
+export const FlatList = AnimatedFlatList;
+export const SectionList = AnimatedSectionList;
