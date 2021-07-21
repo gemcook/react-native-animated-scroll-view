@@ -3073,6 +3073,17 @@ babel-plugin-dynamic-import-node@^2.3.3:
   dependencies:
     object.assign "^4.1.0"
 
+babel-plugin-module-resolver@4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-module-resolver/-/babel-plugin-module-resolver-4.1.0.tgz#22a4f32f7441727ec1fbf4967b863e1e3e9f33e2"
+  integrity sha512-MlX10UDheRr3lb3P0WcaIdtCSRlxdQsB1sBqL7W0raF070bGl1HQQq5K3T2vf2XAYie+ww+5AKC/WrkjRO2knA==
+  dependencies:
+    find-babel-config "^1.2.0"
+    glob "^7.1.6"
+    pkg-up "^3.1.0"
+    reselect "^4.0.0"
+    resolve "^1.13.1"
+
 babel-plugin-module-resolver@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-module-resolver/-/babel-plugin-module-resolver-3.2.0.tgz#ddfa5e301e3b9aa12d852a9979f18b37881ff5a7"
@@ -3083,17 +3094,6 @@ babel-plugin-module-resolver@^3.2.0:
     pkg-up "^2.0.0"
     reselect "^3.0.1"
     resolve "^1.4.0"
-
-babel-plugin-module-resolver@^4.0.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-module-resolver/-/babel-plugin-module-resolver-4.1.0.tgz#22a4f32f7441727ec1fbf4967b863e1e3e9f33e2"
-  integrity sha512-MlX10UDheRr3lb3P0WcaIdtCSRlxdQsB1sBqL7W0raF070bGl1HQQq5K3T2vf2XAYie+ww+5AKC/WrkjRO2knA==
-  dependencies:
-    find-babel-config "^1.2.0"
-    glob "^7.1.6"
-    pkg-up "^3.1.0"
-    reselect "^4.0.0"
-    resolve "^1.13.1"
 
 babel-plugin-polyfill-corejs2@^0.2.2:
   version "0.2.2"
@@ -10515,7 +10515,7 @@ react-native-unimodules@0.12.0:
     unimodules-sensors-interface "~5.4.0"
     unimodules-task-manager-interface "~5.4.0"
 
-react-native-web@~0.14.9:
+react-native-web@0.14.13:
   version "0.14.13"
   resolved "https://registry.yarnpkg.com/react-native-web/-/react-native-web-0.14.13.tgz#b4cc33c64ce0d5258ccac82acf0b916d95e23ad4"
   integrity sha512-L9TNwzSFwvUDRRySHeKimVIQd4qIw+nBmepNN+kDOHWW1mIpTaa4W5ub8StOeifMMwjeBob2ZAxh+HiQKoSjNA==
