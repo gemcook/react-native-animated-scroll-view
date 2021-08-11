@@ -10,10 +10,10 @@ export default function App() {
   return (
     <View style={styles.container}>
       <ScrollView
-        style={styles.container}
         maxHeight={maxHeight}
         minHeight={minHeight}
         AnimationHeaderComponent={<View style={styles.animationHeader} />}
+        showsHorizontalScrollIndicator={false}
       >
         {DATA.map((item) => {
           return (
@@ -31,14 +31,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
-  },
   listItem: {
     width: '100%',
     height: 60,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   animationHeader: {
     backgroundColor: 'red',
