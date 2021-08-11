@@ -13,7 +13,7 @@ export default function App() {
         maxHeight={maxHeight}
         minHeight={minHeight}
         AnimationHeaderComponent={<View style={styles.animationHeader} />}
-        showsHorizontalScrollIndicator={false}
+        showsVerticalScrollIndicator={false}
       >
         {DATA.map((item) => {
           return (
