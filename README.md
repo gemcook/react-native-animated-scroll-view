@@ -12,6 +12,8 @@ npm install react-native-animated-scroll-view
 
 ## Usage
 
+Simple to use
+
 ```tsx
 import * as React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
@@ -59,6 +61,23 @@ const styles = StyleSheet.create({
 });
 
 ```
+
+It can be used not only for `ScrollView`, but also for `FlatList` or `SectionList`
+
+```tsx
+import { ScrollView, FlatList, SectionList } from 'react-native-animated-scroll-view';
+```
+
+## Props
+
+Each component inherits the Props of the original component
+
+| Props | type | description | required | default |
+| :--- | :--- | :--- | :--- | :--- |
+| AnimationHeaderComponent | ReactNode | AnimationHeader component | false | -- |
+| animationHeaderStyle | ViewStyle | animationHeader style | false | -- |
+| maxHeight | number | Header maximum height | true | -- |
+| minHeight | number | header minimum height | true | -- |
 
 ## Contributing
 
