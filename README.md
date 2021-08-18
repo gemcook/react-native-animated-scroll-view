@@ -2,6 +2,8 @@
 
 A component that animates the header when the content is scrolled.
 
+![example1](https://user-images.githubusercontent.com/41561321/129012122-6677bdc3-6fb5-4f08-9104-028be504cf42.gif)
+
 ## Installation
 
 ```sh
@@ -10,13 +12,72 @@ npm install react-native-animated-scroll-view
 
 ## Usage
 
-```js
-import AnimatedScrollView from "react-native-animated-scroll-view";
+Simple to use
 
-// ...
+```tsx
+import * as React from 'react';
+import { StyleSheet, View, Text } from 'react-native';
+import { ScrollView } from 'react-native-animated-scroll-view';
 
-const result = await AnimatedScrollView.multiply(3, 7);
+const DATA = Array.from({ length: 30 }).map((_, index) => ({ id: index }));
+const maxHeight = 150;
+const minHeight = 50;
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <ScrollView
+        maxHeight={maxHeight}
+        minHeight={minHeight}
+        AnimationHeaderComponent={<View style={styles.animationHeader} />}
+      >
+        {DATA.map((item) => {
+          return (
+            <View style={styles.listItem} key={item.id}>
+              <Text>{item.id}</Text>
+            </View>
+          );
+        })}
+      </ScrollView>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  listItem: {
+    width: '100%',
+    height: 60,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  animationHeader: {
+    backgroundColor: 'red',
+    height: '100%',
+    width: '100%',
+  },
+});
+
 ```
+
+It can be used not only for `ScrollView`, but also for `FlatList` or `SectionList`
+
+```tsx
+import { ScrollView, FlatList, SectionList } from 'react-native-animated-scroll-view';
+```
+
+## Props
+
+Each component inherits the Props of the original component
+
+| Props | type | description | required | default |
+| :--- | :--- | :--- | :--- | :--- |
+| AnimationHeaderComponent | ReactNode | AnimationHeader component | false | -- |
+| animationHeaderStyle | ViewStyle | animationHeader style | false | -- |
+| maxHeight | number | Header maximum height | true | -- |
+| minHeight | number | header minimum height | true | -- |
 
 ## Contributing
 
