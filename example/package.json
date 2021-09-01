@@ -16,9 +16,10 @@
     "expo-splash-screen": "0.8.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-native": "0.64.2",
+    "react-native": "0.63.2",
     "react-native-unimodules": "0.12.0",
-    "react-native-web": "0.14.13"
+    "react-native-web": "0.14.13",
+    "@gemcook/react-native-animated-scroll-view": "file:../src"
   },
   "devDependencies": {
     "@babel/core": "7.12.17",

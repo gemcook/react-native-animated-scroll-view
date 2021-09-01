@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import { ScrollView } from 'react-native-animated-scroll-view';
+import { ScrollView } from '@gemcook/react-native-animated-scroll-view';
 
 const DATA = Array.from({ length: 30 }).map((_, index) => ({ id: index }));
 const maxHeight = 150;
