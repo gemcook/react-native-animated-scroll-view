@@ -39,10 +39,7 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-yarn-
 
-    - name: Install Dependences
-      if: steps.cache.outputs.cache-hit != 'true'
-      run: yarn install
-
+    - run: yarn
     - run: yarn typescript
     - run: yarn lint
     - run: yarn test
