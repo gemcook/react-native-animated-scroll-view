@@ -44,7 +44,8 @@
   },
   "homepage": "https://github.com/gemcook/react-native-animated-scroll-view#readme",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "11.0.0",
@@ -100,8 +101,7 @@
       "tagName": "v${version}"
     },
     "npm": {
-      "publish": true,
-      "access": "public"
+      "publish": true
     },
     "github": {
       "release": true
