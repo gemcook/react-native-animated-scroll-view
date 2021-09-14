@@ -14,15 +14,15 @@ import { useAnimationHeader } from '../useAnimationHeader';
 type Props<ListDataType extends unknown> = {
   AnimationHeaderComponent?: React.ReactNode | React.ReactNode[];
   animationHeaderStyle?: ViewStyle;
-  maxHeight: number;
-  minHeight: number;
+  maxHeaderHeight: number;
+  minHeaderHeight: number;
 } & SectionListProps<ListDataType>;
 
 const AnimationHeaderSectionList = <ListType extends unknown>({
   AnimationHeaderComponent,
   animationHeaderStyle,
-  maxHeight,
-  minHeight,
+  maxHeaderHeight,
+  minHeaderHeight,
   contentContainerStyle,
   onScroll,
   scrollEventThrottle = 16,
@@ -30,8 +30,8 @@ const AnimationHeaderSectionList = <ListType extends unknown>({
 }: Props<ListType>) => {
   const { contentInset, contentOffset, handleScroll, headerTop } =
     useAnimationHeader({
-      maxHeight,
-      minHeight,
+      maxHeaderHeight,
+      minHeaderHeight,
       onScroll,
     });
 
@@ -40,7 +40,7 @@ const AnimationHeaderSectionList = <ListType extends unknown>({
       <Animated.View
         style={[
           styles.animatedContainer,
-          { height: maxHeight },
+          { height: maxHeaderHeight },
           animationHeaderStyle,
           { transform: [{ translateY: headerTop }] },
         ]}
@@ -51,7 +51,7 @@ const AnimationHeaderSectionList = <ListType extends unknown>({
         contentInset={contentInset}
         contentOffset={contentOffset}
         contentContainerStyle={[
-          getContentContainerStyle(maxHeight),
+          getContentContainerStyle(maxHeaderHeight),
           contentContainerStyle,
         ]}
         onScroll={handleScroll}
