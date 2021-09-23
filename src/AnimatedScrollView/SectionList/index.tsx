@@ -49,7 +49,7 @@ const AnimationHeaderSectionList = <ListType extends unknown>({
         {AnimationHeaderComponent}
       </Animated.View>
       <SectionList
-        progressViewOffset={progressViewOffset}
+        progressViewOffset={progressViewOffset || maxHeaderHeight}
         contentInset={contentInset}
         contentOffset={contentOffset}
         contentContainerStyle={[
