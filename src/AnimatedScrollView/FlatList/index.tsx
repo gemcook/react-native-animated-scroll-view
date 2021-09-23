@@ -20,6 +20,7 @@ const AnimationHeaderFlatList = <ListType extends unknown>({
   contentContainerStyle,
   onScroll,
   scrollEventThrottle = 16,
+  progressViewOffset,
   ...flatListProps
 }: Props<ListType>) => {
   const { contentInset, contentOffset, handleScroll, headerTop } =
@@ -43,6 +44,7 @@ const AnimationHeaderFlatList = <ListType extends unknown>({
       </Animated.View>
       <FlatList
         contentInset={contentInset}
+        progressViewOffset={progressViewOffset || maxHeaderHeight}
         contentOffset={contentOffset}
         contentContainerStyle={[
           getContentContainerStyle(maxHeaderHeight),

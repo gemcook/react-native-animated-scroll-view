@@ -26,6 +26,7 @@ const AnimationHeaderSectionList = <ListType extends unknown>({
   contentContainerStyle,
   onScroll,
   scrollEventThrottle = 16,
+  progressViewOffset,
   ...sectionListProps
 }: Props<ListType>) => {
   const { contentInset, contentOffset, handleScroll, headerTop } =
@@ -48,6 +49,7 @@ const AnimationHeaderSectionList = <ListType extends unknown>({
         {AnimationHeaderComponent}
       </Animated.View>
       <SectionList
+        progressViewOffset={progressViewOffset}
         contentInset={contentInset}
         contentOffset={contentOffset}
         contentContainerStyle={[
@@ -56,7 +58,6 @@ const AnimationHeaderSectionList = <ListType extends unknown>({
         ]}
         onScroll={handleScroll}
         scrollEventThrottle={scrollEventThrottle}
-        // eslint-disable-next-line react/jsx-props-no-spreading
         {...sectionListProps}
       />
     </>
