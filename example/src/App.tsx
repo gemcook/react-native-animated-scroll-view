@@ -3,15 +3,15 @@ import { StyleSheet, View, Text } from 'react-native';
 import { ScrollView } from '@gemcook/react-native-animated-scroll-view';
 
 const DATA = Array.from({ length: 30 }).map((_, index) => ({ id: index }));
-const maxHeight = 150;
-const minHeight = 50;
+const maxHeaderHeight = 150;
+const minHeaderHeight = 50;
 
 export default function App() {
   return (
     <View style={styles.container}>
       <ScrollView
-        maxHeight={maxHeight}
-        minHeight={minHeight}
+        maxHeaderHeight={maxHeaderHeight}
+        minHeaderHeight={minHeaderHeight}
         AnimationHeaderComponent={<View style={styles.animationHeader} />}
         showsVerticalScrollIndicator={false}
       >
