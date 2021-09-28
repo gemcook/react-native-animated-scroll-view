@@ -8,6 +8,7 @@ import { useAnimationHeader } from '../useAnimationHeader';
 type Props<ListDataType extends unknown> = {
   AnimationHeaderComponent?: React.ReactNode | React.ReactNode[];
   animationHeaderStyle?: ViewStyle;
+  flatListRef?: React.RefObject<FlatList>;
   maxHeaderHeight: number;
   minHeaderHeight: number;
 } & FlatListProps<ListDataType>;
@@ -15,6 +16,7 @@ type Props<ListDataType extends unknown> = {
 const AnimationHeaderFlatList = <ListType extends unknown>({
   AnimationHeaderComponent,
   animationHeaderStyle,
+  flatListRef,
   maxHeaderHeight,
   minHeaderHeight,
   contentContainerStyle,
@@ -43,6 +45,7 @@ const AnimationHeaderFlatList = <ListType extends unknown>({
         {AnimationHeaderComponent}
       </Animated.View>
       <FlatList
+        ref={flatListRef}
         contentInset={contentInset}
         progressViewOffset={progressViewOffset || maxHeaderHeight}
         contentOffset={contentOffset}

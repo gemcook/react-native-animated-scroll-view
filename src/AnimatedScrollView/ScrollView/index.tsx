@@ -8,6 +8,7 @@ import { useAnimationHeader } from '../useAnimationHeader';
 type Props = {
   AnimationHeaderComponent?: React.ReactNode | React.ReactNode[];
   animationHeaderStyle?: ViewStyle;
+  scrollViewRef?: React.RefObject<ScrollView>;
   maxHeaderHeight: number;
   minHeaderHeight: number;
   children?: React.ReactNode;
@@ -16,8 +17,10 @@ type Props = {
 const AnimationHeaderScrollView = ({
   AnimationHeaderComponent,
   animationHeaderStyle,
+  scrollViewRef,
   maxHeaderHeight,
   minHeaderHeight,
+
   contentContainerStyle,
   onScroll,
   scrollEventThrottle = 16,
@@ -44,6 +47,7 @@ const AnimationHeaderScrollView = ({
         {AnimationHeaderComponent}
       </Animated.View>
       <ScrollView
+        ref={scrollViewRef}
         contentInset={contentInset}
         contentOffset={contentOffset}
         contentContainerStyle={[

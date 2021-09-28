@@ -1,4 +1,3 @@
-/* eslint-disable react/require-default-props */
 import React from 'react';
 import {
   Animated,
@@ -14,6 +13,7 @@ import { useAnimationHeader } from '../useAnimationHeader';
 type Props<ListDataType extends unknown> = {
   AnimationHeaderComponent?: React.ReactNode | React.ReactNode[];
   animationHeaderStyle?: ViewStyle;
+  sectionListRef?: React.RefObject<SectionList>;
   maxHeaderHeight: number;
   minHeaderHeight: number;
 } & SectionListProps<ListDataType>;
@@ -21,6 +21,7 @@ type Props<ListDataType extends unknown> = {
 const AnimationHeaderSectionList = <ListType extends unknown>({
   AnimationHeaderComponent,
   animationHeaderStyle,
+  sectionListRef,
   maxHeaderHeight,
   minHeaderHeight,
   contentContainerStyle,
@@ -49,6 +50,7 @@ const AnimationHeaderSectionList = <ListType extends unknown>({
         {AnimationHeaderComponent}
       </Animated.View>
       <SectionList
+        ref={sectionListRef}
         progressViewOffset={progressViewOffset || maxHeaderHeight}
         contentInset={contentInset}
         contentOffset={contentOffset}
