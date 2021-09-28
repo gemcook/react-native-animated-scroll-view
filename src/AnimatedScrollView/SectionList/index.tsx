@@ -1,4 +1,3 @@
-/* eslint-disable react/require-default-props */
 import React from 'react';
 import {
   Animated,
@@ -14,6 +13,7 @@ import { useAnimationHeader } from '../useAnimationHeader';
 type Props<ListDataType extends unknown> = {
   AnimationHeaderComponent?: React.ReactNode | React.ReactNode[];
   animationHeaderStyle?: ViewStyle;
+  sectionListRef?: React.RefObject<SectionList>;
   maxHeight: number;
   minHeight: number;
 } & SectionListProps<ListDataType>;
@@ -23,6 +23,7 @@ const AnimationHeaderSectionList = <ListType extends unknown>({
   animationHeaderStyle,
   maxHeight,
   minHeight,
+  sectionListRef,
   contentContainerStyle,
   onScroll,
   scrollEventThrottle = 16,
@@ -48,6 +49,7 @@ const AnimationHeaderSectionList = <ListType extends unknown>({
         {AnimationHeaderComponent}
       </Animated.View>
       <SectionList
+        ref={sectionListRef}
         contentInset={contentInset}
         contentOffset={contentOffset}
         contentContainerStyle={[
@@ -56,7 +58,6 @@ const AnimationHeaderSectionList = <ListType extends unknown>({
         ]}
         onScroll={handleScroll}
         scrollEventThrottle={scrollEventThrottle}
-        // eslint-disable-next-line react/jsx-props-no-spreading
         {...sectionListProps}
       />
     </>
