@@ -7,7 +7,7 @@ A component that animates the header when the content is scrolled.
 ## Installation
 
 ```sh
-npm install react-native-animated-scroll-view
+npm install @gemcook/react-native-animated-scroll-view
 ```
 
 ## Usage
@@ -20,15 +20,15 @@ import { StyleSheet, View, Text } from 'react-native';
 import { ScrollView } from 'react-native-animated-scroll-view';
 
 const DATA = Array.from({ length: 30 }).map((_, index) => ({ id: index }));
-const maxHeight = 150;
-const minHeight = 50;
+const maxHeaderHeight = 150;
+const minHeaderHeight = 50;
 
 export default function App() {
   return (
     <View style={styles.container}>
       <ScrollView
-        maxHeight={maxHeight}
-        minHeight={minHeight}
+        maxHeaderHeight={maxHeaderHeight}
+        minHeaderHeight={minHeaderHeight}
         AnimationHeaderComponent={<View style={styles.animationHeader} />}
       >
         {DATA.map((item) => {
@@ -59,25 +59,28 @@ const styles = StyleSheet.create({
     width: '100%',
   },
 });
-
 ```
 
 It can be used not only for `ScrollView`, but also for `FlatList` or `SectionList`
 
 ```tsx
-import { ScrollView, FlatList, SectionList } from 'react-native-animated-scroll-view';
+import {
+  ScrollView,
+  FlatList,
+  SectionList,
+} from 'react-native-animated-scroll-view';
 ```
 
 ## Props
 
 Each component inherits the Props of the original component
 
-| Props | type | description | required | default |
-| :--- | :--- | :--- | :--- | :--- |
-| AnimationHeaderComponent | ReactNode | AnimationHeader component | false | -- |
-| animationHeaderStyle | ViewStyle | animationHeader style | false | -- |
-| maxHeight | number | Header maximum height | true | -- |
-| minHeight | number | header minimum height | true | -- |
+| Props                    | type      | description               | required | default |
+| :----------------------- | :-------- | :------------------------ | :------- | :------ |
+| AnimationHeaderComponent | ReactNode | AnimationHeader component | false    | --      |
+| animationHeaderStyle     | ViewStyle | animationHeader style     | false    | --      |
+| maxHeaderHeight          | number    | Header maximum height     | true     | --      |
+| minHeaderHeight          | number    | header minimum height     | true     | --      |
 
 ## Contributing
 
