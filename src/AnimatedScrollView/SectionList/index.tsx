@@ -10,7 +10,7 @@ import styles, { getContentContainerStyle } from './styles';
 
 import { useAnimationHeader } from '../useAnimationHeader';
 
-type Props<ListDataType extends unknown> = {
+type Props<ListDataType> = {
   AnimationHeaderComponent?: React.ReactNode | React.ReactNode[];
   animationHeaderStyle?: ViewStyle;
   sectionListRef?: React.RefObject<SectionList>;
@@ -18,7 +18,7 @@ type Props<ListDataType extends unknown> = {
   minHeaderHeight: number;
 } & SectionListProps<ListDataType>;
 
-const AnimationHeaderSectionList = <ListType extends unknown>({
+const AnimationHeaderSectionList = <ListType,>({
   AnimationHeaderComponent,
   animationHeaderStyle,
   sectionListRef,
