@@ -5,7 +5,7 @@ import styles, { getContentContainerStyle } from './styles';
 
 import { useAnimationHeader } from '../useAnimationHeader';
 
-type Props<ListDataType extends unknown> = {
+type Props<ListDataType> = {
   AnimationHeaderComponent?: React.ReactNode | React.ReactNode[];
   animationHeaderStyle?: ViewStyle;
   flatListRef?: React.RefObject<FlatList>;
@@ -13,7 +13,7 @@ type Props<ListDataType extends unknown> = {
   minHeaderHeight: number;
 } & FlatListProps<ListDataType>;
 
-const AnimationHeaderFlatList = <ListType extends unknown>({
+const AnimationHeaderFlatList = <ListType,>({
   AnimationHeaderComponent,
   animationHeaderStyle,
   flatListRef,
