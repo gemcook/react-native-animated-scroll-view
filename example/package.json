@@ -16,7 +16,7 @@
     "expo-splash-screen": "0.13.5",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-native": "0.63.2",
+    "react-native": "0.66.3",
     "react-native-unimodules": "0.14.10",
     "react-native-web": "0.17.5",
     "@gemcook/react-native-animated-scroll-view": "file:../src"
