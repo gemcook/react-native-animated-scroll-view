@@ -1,13 +1,28 @@
 {
-  "extends": ["config:base"],
+  "extends": [
+    "config:base"
+  ],
   "packageRules": [
     {
       "groupName": "all non-major dependencies",
-      "updateTypes": ["patch", "minor"],
+      "updateTypes": [
+        "patch",
+        "minor"
+      ],
       "groupSlug": "all-minor-patch",
-      "excludePackageNames": ["react-native"]
+      "excludePackageNames": [
+        "react-native",
+        "react"
+      ]
     }
   ],
-  "labels": ["dependencies"],
-  "schedule": "every weekend"
+  "labels": [
+    "dependencies"
+  ],
+  "schedule": "every weekend",
+  "ignoreDeps": [
+    "react-native",
+    "react",
+    "husky"
+  ]
 }
