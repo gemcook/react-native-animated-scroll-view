@@ -12,8 +12,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "expo": "43.0.3",
-    "expo-splash-screen": "0.13.5",
+    "expo": "43.0.5",
+    "expo-splash-screen": "0.14.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-native": "0.64.3",
@@ -21,8 +21,8 @@
     "@gemcook/react-native-animated-scroll-view": "file:../src"
   },
   "devDependencies": {
-    "@babel/core": "7.16.0",
-    "@babel/runtime": "7.16.3",
+    "@babel/core": "7.17.0",
+    "@babel/runtime": "7.17.0",
     "babel-plugin-module-resolver": "4.1.0",
     "babel-preset-expo": "8.5.1",
     "expo-cli": "4.13.0"
