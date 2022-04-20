@@ -23,6 +23,8 @@
   "ignoreDeps": [
     "react-native",
     "react",
+    "react-dom",
+    "@types/react",
     "husky"
   ]
 }
