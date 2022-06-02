@@ -1,6 +1,6 @@
 {
   "name": "@gemcook/react-native-animated-scroll-view",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A component that animates the header when the content is scrolled.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
