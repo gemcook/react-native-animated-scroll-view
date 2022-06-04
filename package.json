@@ -65,7 +65,7 @@
     "eslint-plugin-react-native": "4.0.0",
     "husky": "4.3.8",
     "jest": "28.1.0",
-    "metro-react-native-babel-preset": "^0.71.0",
+    "metro-react-native-babel-preset": "0.71.0",
     "pod-install": "0.1.36",
     "prettier": "2.6.2",
     "react": "17.0.2",
