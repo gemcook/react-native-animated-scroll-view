@@ -22,4 +22,9 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-var-requires': 'off',
   },
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
 };
