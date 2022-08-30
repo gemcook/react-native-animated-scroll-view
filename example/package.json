@@ -14,9 +14,9 @@
   "dependencies": {
     "expo": "46.0.9",
     "expo-splash-screen": "0.16.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-native": "0.68.2",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
+    "react-native": "0.69.5",
     "react-native-web": "0.18.8",
     "@gemcook/react-native-animated-scroll-view": "file:../src"
   },
