@@ -10,6 +10,12 @@ A component that animates the header when the content is scrolled.
 npm install @gemcook/react-native-animated-scroll-view
 ```
 
+or yarn
+
+```sh
+yarn add @gemcook/react-native-animated-scroll-view
+```
+
 ## Usage
 
 Simple to use
