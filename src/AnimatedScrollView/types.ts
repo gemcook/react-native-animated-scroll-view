@@ -5,4 +5,5 @@ export type ExpandAnimationType = {
   animationHeaderStyle?: ViewStyle;
   maxHeaderHeight: number;
   minHeaderHeight: number;
+  floating?: boolean;
 };

@@ -18,11 +18,11 @@ const AnimationHeaderScrollView = ({
   scrollViewRef,
   maxHeaderHeight,
   minHeaderHeight,
-
   contentContainerStyle,
   onScroll,
   scrollEventThrottle = 16,
   children,
+  floating,
   ...scrollViewProps
 }: Props) => {
   const { contentInset, contentOffset, handleScroll, headerTop } =
@@ -30,6 +30,7 @@ const AnimationHeaderScrollView = ({
       maxHeaderHeight,
       minHeaderHeight,
       onScroll,
+      floating,
     });
 
   return (

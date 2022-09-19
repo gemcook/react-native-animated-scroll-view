@@ -21,6 +21,7 @@ const AnimationHeaderSectionList = <ListType,>({
   onScroll,
   scrollEventThrottle = 16,
   progressViewOffset,
+  floating,
   ...sectionListProps
 }: Props<ListType>) => {
   const { contentInset, contentOffset, handleScroll, headerTop } =
@@ -28,6 +29,7 @@ const AnimationHeaderSectionList = <ListType,>({
       maxHeaderHeight,
       minHeaderHeight,
       onScroll,
+      floating,
     });
 
   return (
