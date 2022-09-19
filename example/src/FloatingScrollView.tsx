@@ -1,18 +1,20 @@
 import * as React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, SafeAreaView } from 'react-native';
 import { ScrollView } from '@gemcook/react-native-animated-scroll-view';
 import { DATA } from './data';
+import AppBar from './AppBar';
 
 const maxHeaderHeight = 150;
 const minHeaderHeight = 50;
 
 export default function FloatingScrollView() {
   return (
-    <View style={styles.container}>
+    <>
+      <SafeAreaView style={styles.safeAreaContainer} />
       <ScrollView
         maxHeaderHeight={maxHeaderHeight}
         minHeaderHeight={minHeaderHeight}
-        AnimationHeaderComponent={<View style={styles.animationHeader} />}
+        AnimationHeaderComponent={<AppBar />}
         showsVerticalScrollIndicator={false}
         floating
       >
@@ -24,11 +26,14 @@ export default function FloatingScrollView() {
           );
         })}
       </ScrollView>
-    </View>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
+  safeAreaContainer: {
+    backgroundColor: 'red',
+  },
   container: {
     flex: 1,
   },
