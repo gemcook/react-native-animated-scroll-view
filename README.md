@@ -10,6 +10,12 @@ A component that animates the header when the content is scrolled.
 npm install @gemcook/react-native-animated-scroll-view
 ```
 
+or yarn
+
+```sh
+yarn add @gemcook/react-native-animated-scroll-view
+```
+
 ## Usage
 
 Simple to use
@@ -78,9 +84,10 @@ Each component inherits the Props of the original component
 | Props                    | type      | description               | required | default |
 | :----------------------- | :-------- | :------------------------ | :------- | :------ |
 | AnimationHeaderComponent | ReactNode | AnimationHeader component | false    | --      |
-| animationHeaderStyle     | ViewStyle | animationHeader style     | false    | --      |
+| animationHeaderStyle     | ViewStyle | AnimationHeader style     | false    | --      |
 | maxHeaderHeight          | number    | Header maximum height     | true     | --      |
-| minHeaderHeight          | number    | header minimum height     | true     | --      |
+| minHeaderHeight          | number    | Header minimum height     | true     | --      |
+| floating                 | boolean   | Whether or not the header should appear immediately when the user scrolls upward     | false     | false      |
 
 ## Contributing
 

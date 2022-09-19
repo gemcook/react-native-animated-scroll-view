@@ -10,21 +10,33 @@ export type Params = {
   maxHeaderHeight: number;
   minHeaderHeight: number;
   onScroll?: (event: NativeSyntheticEvent<NativeScrollEvent>) => void;
+  floating?: boolean;
 };
 
 export const useAnimationHeader = ({
   maxHeaderHeight,
   minHeaderHeight,
   onScroll,
+  floating = false,
 }: Params) => {
   const heightAnim = useRef(new Animated.Value(0)).current;
   const offset = Platform.OS === 'ios' ? maxHeaderHeight : 0;
 
-  const headerTop = heightAnim.interpolate({
-    inputRange: [-offset, maxHeaderHeight - minHeaderHeight - offset],
-    outputRange: [0, -(maxHeaderHeight - minHeaderHeight)],
-    extrapolate: 'clamp',
-  });
+  const headerTop = useMemo(() => {
+    if (floating) {
+      return Animated.diffClamp(
+        Animated.multiply(heightAnim, -1),
+        minHeaderHeight - maxHeaderHeight,
+        0
+      );
+    }
+
+    return heightAnim.interpolate({
+      inputRange: [-offset, maxHeaderHeight - minHeaderHeight - offset],
+      outputRange: [0, -(maxHeaderHeight - minHeaderHeight)],
+      extrapolate: 'clamp',
+    });
+  }, [floating, offset, maxHeaderHeight, minHeaderHeight, heightAnim]);
 
   const contentInset = useMemo(
     () => ({ top: maxHeaderHeight }),
@@ -42,11 +54,19 @@ export const useAnimationHeader = ({
     (event: NativeSyntheticEvent<NativeScrollEvent>) => {
       Animated.event([{ nativeEvent: { contentOffset: { y: heightAnim } } }], {
         useNativeDriver: false,
+        listener: (event: NativeSyntheticEvent<NativeScrollEvent>) => {
+          if (floating) {
+            const offsetY = event.nativeEvent.contentOffset.y;
+            if (offsetY < -maxHeaderHeight) {
+              heightAnim.extractOffset();
+            }
+          }
+        },
       })(event);
 
       onScroll?.(event);
     },
-    [onScroll, heightAnim]
+    [onScroll, heightAnim, maxHeaderHeight, floating]
   );
 
   return {
