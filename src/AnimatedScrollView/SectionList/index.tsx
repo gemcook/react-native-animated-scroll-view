@@ -1,22 +1,15 @@
 import React from 'react';
-import {
-  Animated,
-  ViewStyle,
-  SectionListProps,
-  SectionList,
-} from 'react-native';
+import { Animated, SectionListProps, SectionList } from 'react-native';
 
 import styles, { getContentContainerStyle } from './styles';
 
 import { useAnimationHeader } from '../useAnimationHeader';
+import type { ExpandAnimationType } from '../types';
 
 type Props<ListDataType> = {
-  AnimationHeaderComponent?: React.ReactNode | React.ReactNode[];
-  animationHeaderStyle?: ViewStyle;
   sectionListRef?: React.RefObject<SectionList>;
-  maxHeaderHeight: number;
-  minHeaderHeight: number;
-} & SectionListProps<ListDataType>;
+} & ExpandAnimationType &
+  SectionListProps<ListDataType>;
 
 const AnimationHeaderSectionList = <ListType,>({
   AnimationHeaderComponent,

@@ -1,17 +1,15 @@
 import React from 'react';
-import { Animated, FlatListProps, FlatList, ViewStyle } from 'react-native';
+import { Animated, FlatListProps, FlatList } from 'react-native';
 
 import styles, { getContentContainerStyle } from './styles';
 
 import { useAnimationHeader } from '../useAnimationHeader';
+import type { ExpandAnimationType } from '../types';
 
 type Props<ListDataType> = {
-  AnimationHeaderComponent?: React.ReactNode | React.ReactNode[];
-  animationHeaderStyle?: ViewStyle;
   flatListRef?: React.RefObject<FlatList>;
-  maxHeaderHeight: number;
-  minHeaderHeight: number;
-} & FlatListProps<ListDataType>;
+} & ExpandAnimationType &
+  FlatListProps<ListDataType>;
 
 const AnimationHeaderFlatList = <ListType,>({
   AnimationHeaderComponent,
