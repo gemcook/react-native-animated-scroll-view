@@ -55,8 +55,6 @@ export const useAnimationHeader = ({
       Animated.event([{ nativeEvent: { contentOffset: { y: heightAnim } } }], {
         useNativeDriver: false,
         listener: (event: NativeSyntheticEvent<NativeScrollEvent>) => {
-          onScroll?.(event);
-
           if (floating) {
             const offsetY = event.nativeEvent.contentOffset.y;
             if (offsetY < -maxHeaderHeight) {
@@ -65,6 +63,8 @@ export const useAnimationHeader = ({
           }
         },
       })(event);
+
+      onScroll?.(event);
     },
     [onScroll, heightAnim, maxHeaderHeight, floating]
   );
