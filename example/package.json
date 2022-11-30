@@ -12,19 +12,19 @@
     "test": "jest"
   },
   "dependencies": {
-    "expo": "47.0.6",
-    "expo-splash-screen": "0.16.2",
+    "expo": "47.0.8",
+    "expo-splash-screen": "0.17.5",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-native": "0.69.5",
-    "react-native-web": "0.18.9",
+    "react-native-web": "0.18.10",
     "@gemcook/react-native-animated-scroll-view": "file:../src"
   },
   "devDependencies": {
-    "@babel/core": "7.19.1",
-    "@babel/runtime": "7.19.0",
+    "@babel/core": "7.20.5",
+    "@babel/runtime": "7.20.6",
     "babel-plugin-module-resolver": "4.1.0",
-    "babel-preset-expo": "9.2.0",
-    "expo-cli": "6.0.5"
+    "babel-preset-expo": "9.2.2",
+    "expo-cli": "6.0.8"
   }
 }
