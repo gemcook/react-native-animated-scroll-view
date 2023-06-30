@@ -74,7 +74,7 @@
     "react-native": "0.69.5",
     "react-native-builder-bob": "0.21.0",
     "release-it": "15.11.0",
-    "typescript": "5.1.6"
+    "typescript": "5.0.4"
   },
   "peerDependencies": {
     "react": "*",
@@ -129,5 +129,8 @@
       ]
     ]
   },
-  "dependencies": {}
+  "dependencies": {},
+  "volta": {
+    "node": "20.3.1"
+  }
 }
