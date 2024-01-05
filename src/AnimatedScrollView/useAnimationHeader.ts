@@ -27,7 +27,7 @@ export const useAnimationHeader = ({
       return Animated.diffClamp(
         Animated.multiply(heightAnim, -1),
         minHeaderHeight - maxHeaderHeight,
-        0
+        0,
       );
     }
 
@@ -40,14 +40,14 @@ export const useAnimationHeader = ({
 
   const contentInset = useMemo(
     () => ({ top: maxHeaderHeight }),
-    [maxHeaderHeight]
+    [maxHeaderHeight],
   );
   const contentOffset = useMemo(
     () => ({
       x: 0,
       y: -offset,
     }),
-    [offset]
+    [offset],
   );
 
   const handleScroll = useCallback(
@@ -66,7 +66,7 @@ export const useAnimationHeader = ({
 
       onScroll?.(event);
     },
-    [onScroll, heightAnim, maxHeaderHeight, floating]
+    [onScroll, heightAnim, maxHeaderHeight, floating],
   );
 
   return {

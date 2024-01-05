@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
 });
 
 export const getContentContainerStyle = (
-  maxHeaderHeight: number
+  maxHeaderHeight: number,
 ): ViewStyle => {
   return {
     paddingTop: Platform.OS === 'android' ? maxHeaderHeight : 0,
