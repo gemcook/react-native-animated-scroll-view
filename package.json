@@ -53,28 +53,28 @@
     "@commitlint/config-conventional": "18.4.4",
     "@react-native-community/eslint-config": "3.2.0",
     "@release-it/conventional-changelog": "8.0.1",
-    "@types/jest": "29.5.2",
+    "@types/jest": "29.5.11",
     "@types/react": "18.0.17",
-    "@types/react-native": "0.72.2",
-    "@typescript-eslint/eslint-plugin": "6.7.5",
-    "@typescript-eslint/parser": "6.7.5",
+    "@types/react-native": "0.72.8",
+    "@typescript-eslint/eslint-plugin": "6.17.0",
+    "@typescript-eslint/parser": "6.17.0",
     "commitlint": "18.4.4",
-    "eslint": "8.43.0",
-    "eslint-config-prettier": "9.0.0",
+    "eslint": "8.56.0",
+    "eslint-config-prettier": "9.1.0",
     "eslint-plugin-prettier": "5.1.2",
-    "eslint-plugin-react": "7.32.2",
+    "eslint-plugin-react": "7.33.2",
     "eslint-plugin-react-hooks": "4.6.0",
-    "eslint-plugin-react-native": "4.0.0",
+    "eslint-plugin-react-native": "4.1.0",
     "husky": "4.3.8",
-    "jest": "29.5.0",
-    "metro-react-native-babel-preset": "0.76.7",
-    "pod-install": "0.1.38",
+    "jest": "29.7.0",
+    "metro-react-native-babel-preset": "0.77.0",
+    "pod-install": "0.1.39",
     "prettier": "3.1.1",
     "react": "18.0.0",
     "react-native": "0.69.5",
-    "react-native-builder-bob": "0.21.0",
+    "react-native-builder-bob": "0.23.2",
     "release-it": "17.0.1",
-    "typescript": "5.0.4"
+    "typescript": "5.3.3"
   },
   "peerDependencies": {
     "react": "*",
@@ -131,7 +131,7 @@
   },
   "dependencies": {},
   "volta": {
-    "node": "20.3.1",
-    "yarn": "1.22.19"
+    "node": "20.10.0",
+    "yarn": "1.22.21"
   }
 }
