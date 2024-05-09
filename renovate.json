@@ -32,5 +32,8 @@
     "react-dom",
     "@types/react",
     "husky"
+  ],
+  "reviewers": [
+    "@sosomuse"
   ]
 }
