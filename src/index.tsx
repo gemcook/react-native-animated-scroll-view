@@ -1,6 +1,6 @@
-import AnimatedScrollView from './AnimatedScrollView/ScrollView';
-import AnimatedFlatList from './AnimatedScrollView/FlatList';
-import AnimatedSectionList from './AnimatedScrollView/SectionList';
+import AnimatedFlatList from "./AnimatedScrollView/FlatList";
+import AnimatedScrollView from "./AnimatedScrollView/ScrollView";
+import AnimatedSectionList from "./AnimatedScrollView/SectionList";
 
 export const ScrollView = AnimatedScrollView;
 export const FlatList = AnimatedFlatList;

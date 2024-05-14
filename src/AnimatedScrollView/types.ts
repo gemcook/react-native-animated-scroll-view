@@ -1,4 +1,4 @@
-import type { ViewStyle } from 'react-native';
+import type { ViewStyle } from "react-native";
 
 export type ExpandAnimationType = {
   AnimationHeaderComponent?: React.ReactNode | React.ReactNode[];

@@ -1,10 +1,10 @@
-import React from 'react';
-import { Animated, ScrollView, ScrollViewProps } from 'react-native';
+import React from "react";
+import { Animated, ScrollView, ScrollViewProps } from "react-native";
 
-import styles, { getContentContainerStyle } from './styles';
+import styles, { getContentContainerStyle } from "./styles";
 
-import { useAnimationHeader } from '../useAnimationHeader';
-import type { ExpandAnimationType } from '../types';
+import type { ExpandAnimationType } from "../types";
+import { useAnimationHeader } from "../useAnimationHeader";
 
 type Props = {
   scrollViewRef?: React.RefObject<ScrollView>;

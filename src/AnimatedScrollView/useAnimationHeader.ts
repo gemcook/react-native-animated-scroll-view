@@ -1,10 +1,10 @@
-import { useCallback, useMemo, useRef } from 'react';
+import { useCallback, useMemo, useRef } from "react";
 import {
   Animated,
   NativeScrollEvent,
   NativeSyntheticEvent,
   Platform,
-} from 'react-native';
+} from "react-native";
 
 export type Params = {
   maxHeaderHeight: number;
@@ -20,7 +20,7 @@ export const useAnimationHeader = ({
   floating = false,
 }: Params) => {
   const heightAnim = useRef(new Animated.Value(0)).current;
-  const offset = Platform.OS === 'ios' ? maxHeaderHeight : 0;
+  const offset = Platform.OS === "ios" ? maxHeaderHeight : 0;
 
   const headerTop = useMemo(() => {
     if (floating) {
@@ -34,7 +34,7 @@ export const useAnimationHeader = ({
     return heightAnim.interpolate({
       inputRange: [-offset, maxHeaderHeight - minHeaderHeight - offset],
       outputRange: [0, -(maxHeaderHeight - minHeaderHeight)],
-      extrapolate: 'clamp',
+      extrapolate: "clamp",
     });
   }, [floating, offset, maxHeaderHeight, minHeaderHeight, heightAnim]);
 

@@ -5,35 +5,17 @@
     "regexManagers:biomeVersions",
     ":pinAllExceptPeerDependencies"
   ],
-  "labels": [
-    "renovate"
-  ],
+  "labels": ["renovate"],
   "timezone": "Asia/Tokyo",
-  "schedule": [
-    "before 9am on Monday"
-  ],
+  "schedule": ["before 9am on Monday"],
   "packageRules": [
     {
       "groupName": "all non-major dependencies",
-      "updateTypes": [
-        "patch",
-        "minor"
-      ],
+      "updateTypes": ["patch", "minor"],
       "groupSlug": "all-minor-patch",
-      "excludePackageNames": [
-        "react-native",
-        "react"
-      ]
+      "excludePackageNames": ["react-native", "react"]
     }
   ],
-  "ignoreDeps": [
-    "react-native",
-    "react",
-    "react-dom",
-    "@types/react",
-    "husky"
-  ],
-  "reviewers": [
-    "@sosomuse"
-  ]
+  "ignoreDeps": ["react-native", "react", "react-dom", "@types/react", "husky"],
+  "reviewers": ["@sosomuse"]
 }

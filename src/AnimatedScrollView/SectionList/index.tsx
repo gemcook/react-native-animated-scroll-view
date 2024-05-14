@@ -1,10 +1,9 @@
-import React from 'react';
-import { Animated, SectionListProps, SectionList } from 'react-native';
+import React from "react";
+import { Animated, SectionList, SectionListProps } from "react-native";
 
-import styles, { getContentContainerStyle } from './styles';
-
-import { useAnimationHeader } from '../useAnimationHeader';
-import type { ExpandAnimationType } from '../types';
+import type { ExpandAnimationType } from "../types";
+import { useAnimationHeader } from "../useAnimationHeader";
+import styles, { getContentContainerStyle } from "./styles";
 
 type Props<ListDataType> = {
   sectionListRef?: React.RefObject<SectionList>;

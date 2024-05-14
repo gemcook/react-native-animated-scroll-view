@@ -1,0 +1,46 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "organizeImports": {
+    "enabled": true
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "suspicious": {
+        "noExplicitAny": "off",
+        "noShadowRestrictedNames": "off",
+        "noArrayIndexKey": "off",
+        "noAssignInExpressions": "off"
+      },
+      "correctness": {
+        "noUnreachable": "off",
+        "useExhaustiveDependencies": "off"
+      },
+      "complexity": {
+        "useOptionalChain": "off",
+        "noBannedTypes": "off",
+        "noForEach": "off",
+        "noUselessSwitchCase": "off",
+        "noStaticOnlyClass": "off"
+      },
+      "style": {
+        "useImportType": "off",
+        "noParameterAssign": "off",
+        "noUnusedTemplateLiteral": "off",
+        "useNodejsImportProtocol": "off"
+      },
+      "performance": {}
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 80,
+    "lineEnding": "lf"
+  },
+  "files": {
+    "ignore": ["./lib/*", "./example/.expo/*"]
+  }
+}
