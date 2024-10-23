@@ -12,23 +12,23 @@
     "test": "jest"
   },
   "dependencies": {
-    "expo": "51.0.2",
-    "expo-splash-screen": "0.22.0",
+    "expo": "51.0.38",
+    "expo-splash-screen": "0.27.6",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-native": "0.70.6",
-    "react-native-web": "0.19.10",
+    "react-native-web": "0.19.13",
     "@gemcook/react-native-animated-scroll-view": "file:../src"
   },
   "devDependencies": {
-    "@babel/core": "7.23.7",
-    "@babel/runtime": "7.23.7",
-    "babel-plugin-module-resolver": "5.0.0",
-    "babel-preset-expo": "11.0.5",
+    "@babel/core": "7.25.9",
+    "@babel/runtime": "7.25.9",
+    "babel-plugin-module-resolver": "5.0.2",
+    "babel-preset-expo": "11.0.15",
     "expo-cli": "6.3.10"
   },
   "volta": {
-    "node": "20.10.0",
-    "yarn": "1.22.1"
+    "node": "20.18.0",
+    "yarn": "1.22.22"
   }
 }
