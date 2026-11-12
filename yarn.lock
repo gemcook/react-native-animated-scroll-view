@@ -7839,10 +7839,10 @@ plist@^3.0.2:
     base64-js "^1.5.1"
     xmlbuilder "^15.1.1"
 
-pod-install@0.1.39:
-  version "0.1.39"
-  resolved "https://registry.yarnpkg.com/pod-install/-/pod-install-0.1.39.tgz#853a0585bafbd332c2ca6543854fd4919958cfb3"
-  integrity sha512-0kVvdLYe0CtfJEr+ISvTMxAEB0UF4JMRToPjuu9xAAq1mEqA2Ql5u7uLWX1m45BMM+7NfU4LnBbnfNjmQE9GCw==
+pod-install@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/pod-install/-/pod-install-1.2.1.tgz#d60e8e25100fa0702c06b5272dadb64d01b7e0eb"
+  integrity sha512-A1RKWVrHNhBjn4/jjRiV139CzdFziGh21avjatdFgeF+R9UZZujDlGrHJQi0JaKYyHmuJrNlESTFwK6MYA4bbA==
 
 posix-character-classes@^0.1.0:
   version "0.1.1"
